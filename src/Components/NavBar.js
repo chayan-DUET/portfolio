@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
  export default function NavBar(){
      return <>
     
@@ -9,31 +10,31 @@ import React from "react";
                     <div className="row align-items-center">
                         <div className="col-xl-3 col-lg-2">
                             <div className="logo">
-                                <a href="index.html">
+                                <Link to="/">
                                     <img src="img/logo.png" alt=""/>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="col-xl-6 col-lg-7">
                             <div className="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a className="active" href="index.html">home</a></li>
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="services.html">Services</a></li>
-                                        <li><a href="#">blog <i className="ti-angle-down"></i></a>
+                                        <li><Link className="active" to="/">home</Link></li>
+                                        <li><Link to="/about">About</Link></li>
+                                        <li><Link to="/services">Services</Link></li>
+                                        <li><Link to="#">blog <i className="ti-angle-down"></i></Link>
                                             <ul className="submenu">
-                                                <li><a href="blog.html">blog</a></li>
-                                                <li><a href="single-blog.html">single-blog</a></li>
+                                                <li><Link to="/blog">blog</Link></li>
+                                                <li><Link to="/single-blog">single-blog</Link></li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">pages <i className="ti-angle-down"></i></a>
+                                        <li><Link to="#">pages <i className="ti-angle-down"></i></Link>
                                             <ul className="submenu">
-                                                 <li><a href="portfolio.html">Portfolio</a></li>
-                                                 <li><a href="elements.html">elements</a></li>
+                                                 <li><Link to="/portfolio">Portfolio</Link></li>
+                                                 <li><Link to="/elements">elements</Link></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><Link to="/contact">Contact</Link></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -41,7 +42,7 @@ import React from "react";
                         <div className="col-xl-3 col-lg-3 d-none d-lg-block">
                             <div className="Appointment">
                                 <div className="book_btn d-none d-lg-block">
-                                    <a  href="#">Contact Me</a>
+                                    <Link  to="/contact">Contact Me</Link>
                                 </div>
                             </div>
                         </div>
